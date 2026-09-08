@@ -6,12 +6,18 @@
 
 <p align="center"><strong>Find out what rental agents and homeowners might not tell you.</strong></p>
 
+<p align="center">
+  <a href="https://t.me/vecina_app_bot?profile">
+    <img src="https://img.shields.io/badge/Open%20in-Telegram-26A5E4?logo=telegram&logoColor=white&style=for-the-badge" alt="Open Vecina in Telegram">
+  </a>
+</p>
+
 Vecina is a crowdsourced, map-based tool for discovering and reporting neighborhood and property issues in Valencia, Spain — street noise, noisy neighbors, smells, mold, pests, and other problems that are easy to hide during a quick apartment viewing but hard to live with every day.
 
 Anyone who has ever had to relocate knows how difficult it is to weigh every factor before signing a lease. Vecina surfaces the invisible ones — reported anonymously by the people who actually live nearby.
 
 <p align="center">
-  <img src="app1.png" alt="Vecina map view" width="800">
+  <img src="app1.png" alt="Vecina map view" width="480">
   <br>
   <em>Map view with issue pins</em>
 </p>
@@ -21,6 +27,7 @@ Anyone who has ever had to relocate knows how difficult it is to weigh every fac
 [![Firebase](https://img.shields.io/badge/backend-Firebase-FFCA28?logo=firebase&logoColor=black)](https://firebase.google.com/)
 [![Static Site](https://img.shields.io/badge/build-none%20needed-brightgreen)]()
 [![Telegram Mini App ready](https://img.shields.io/badge/Telegram-Mini%20App%20ready-26A5E4?logo=telegram&logoColor=white)](https://core.telegram.org/bots/webapps)
+[![Try the app](https://img.shields.io/badge/Try%20it-t.me%2Fvecina__app__bot-26A5E4?logo=telegram&logoColor=white)](https://t.me/vecina_app_bot?profile)
 [![License](https://img.shields.io/badge/license-TBD-lightgrey)]()
 
 ---
@@ -37,15 +44,11 @@ Anyone who has ever had to relocate knows how difficult it is to weigh every fac
 - ⚡ **Zero build step** — plain HTML/CSS/JS, deployable to any static host
 
 <p align="center">
-  <img src="app2.jpg" alt="Report flow screenshot" width="600">
+  <img src="app2.jpg" alt="Report flow screenshot" width="280">
+  &nbsp;&nbsp;
+  <img src="app3.png" alt="Vote and info sheet screenshot" width="280">
   <br>
-  <em>Report flow — drag pin, select issues, submit</em>
-</p>
-
-<p align="center">
-  <img src="app3.png" alt="Vote and info sheet screenshot" width="600">
-  <br>
-  <em>Voting on a report and viewing building details</em>
+  <em>Report flow (left) · Voting &amp; building details (right)</em>
 </p>
 
 ## 🧱 Stack
