@@ -2,7 +2,7 @@
   <img src="logo.jpg" alt="Vecina logo" width="120">
 </p>
 
-<h1 align="center">Vecina</h1>
+<h1 align="center">Vecina App</h1>
 
 <p align="center"><strong>Find out what rental agents and homeowners might not tell you.</strong></p>
 
