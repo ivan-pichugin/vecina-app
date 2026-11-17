@@ -1,117 +1,119 @@
 <p align="center">
-  <img src="logo.jpg" alt="Vecina logo" width="120">
+  <img src="brand/vecina-logo.svg" alt="Vecina" width="300">
 </p>
 
-<h1 align="center">Vecina App</h1>
-
-<p align="center"><strong>Find out what rental agents and homeowners might not tell you.</strong></p>
+<p align="center"><strong>The things a viewing won't show you.</strong><br>
+Neighbour-reported noise, smells and building issues across Valencia — on one map.</p>
 
 <p align="center">
-  <a href="https://t.me/vecina_app_bot?profile">
-    <img src="https://img.shields.io/badge/Open%20in-Telegram-26A5E4?logo=telegram&logoColor=white&style=for-the-badge" alt="Open Vecina in Telegram">
-  </a>
+  <a href="https://t.me/vecina_app_bot?profile"><img src="https://img.shields.io/badge/Open%20in%20Telegram-16130F?style=for-the-badge&logo=telegram&logoColor=FF5B2E" alt="Open Vecina in Telegram"></a>
 </p>
-
-Vecina is a crowdsourced, map-based tool for discovering and reporting neighborhood and property issues in Valencia, Spain — street noise, noisy neighbors, smells, mold, pests, and other problems that are easy to hide during a quick apartment viewing but hard to live with every day.
-
-Anyone who has ever had to relocate knows how difficult it is to weigh every factor before signing a lease. Vecina surfaces the invisible ones — reported anonymously by the people who actually live nearby.
 
 <p align="center">
-  <img src="app1.png" alt="Vecina map view" width="480">
-  <br>
-  <em>Map view with issue pins</em>
+  <img src="https://img.shields.io/badge/MapLibre%20GL-16130F?style=flat-square&logo=maplibre&logoColor=white" alt="MapLibre GL">
+  <img src="https://img.shields.io/badge/PMTiles-16130F?style=flat-square" alt="PMTiles">
+  <img src="https://img.shields.io/badge/Firebase-16130F?style=flat-square&logo=firebase&logoColor=FF5B2E" alt="Firebase">
+  <img src="https://img.shields.io/badge/no%20build%20step-FF5B2E?style=flat-square" alt="No build step">
+  <img src="https://img.shields.io/badge/license-TBD-ECE7E0?style=flat-square" alt="License TBD">
 </p>
-
-[![Made with MapLibre GL JS](https://img.shields.io/badge/map-MapLibre%20GL%20JS-396?logo=maplibre&logoColor=white)](https://maplibre.org/)
-[![PMTiles](https://img.shields.io/badge/tiles-PMTiles-orange)](https://protomaps.com/docs/pmtiles)
-[![Firebase](https://img.shields.io/badge/backend-Firebase-FFCA28?logo=firebase&logoColor=black)](https://firebase.google.com/)
-[![Static Site](https://img.shields.io/badge/build-none%20needed-brightgreen)]()
-[![Telegram Mini App ready](https://img.shields.io/badge/Telegram-Mini%20App%20ready-26A5E4?logo=telegram&logoColor=white)](https://core.telegram.org/bots/webapps)
-[![Try the app](https://img.shields.io/badge/Try%20it-t.me%2Fvecina__app__bot-26A5E4?logo=telegram&logoColor=white)](https://t.me/vecina_app_bot?profile)
-[![License](https://img.shields.io/badge/license-TBD-lightgrey)]()
 
 ---
 
-## ✨ Features
+A flat can look perfect for the twenty minutes of a viewing. Then you move in and meet the 3 a.m. bar crowd, the drain smell, the mould behind the wardrobe and the lift that has been "being fixed" since spring.
 
-- 🗺️ **Interactive map of Valencia** rendered with MapLibre GL JS and a self-hosted PMTiles basemap — no tile server, no API keys for map rendering
-- 📍 **Drop a pin** for smells, permanent noise, or temporary noise, right where it happens
-- 🏢 **Report a building** — flag issues with a specific apartment (mold, pests, no hot water, illegal Airbnb noise, etc.) or a shared community area (broken elevator, dirty common spaces, unsecured entrance, etc.)
-- 👍👎 **Vote on existing reports** to confirm or dispute what others have flagged, plus short notes
-- 📡 **Location-gated reporting** — pins can only be placed near your actual location, keeping reports honest
-- 🕵️ **Anonymous by design** — Firebase Anonymous Auth means no accounts, no personal data, just verified proximity
-- 📱 **Works as a Telegram Mini App** out of the box via the Telegram WebApp SDK
-- ⚡ **Zero build step** — plain HTML/CSS/JS, deployable to any static host
+**Vecina** is a crowdsourced map of exactly that. People who actually live on the street pin what they hear, smell and deal with — anonymously, and only where they physically are. Renters check an address before they sign.
 
 <p align="center">
-  <img src="app2.jpg" alt="Report flow screenshot" width="280">
-  &nbsp;&nbsp;
-  <img src="app3.png" alt="Vote and info sheet screenshot" width="280">
-  <br>
-  <em>Report flow (left) · Voting &amp; building details (right)</em>
+  <img src="docs/screen-map.png" alt="Map with issue pins" width="260">
+  &nbsp;
+  <img src="docs/screen-report.png" alt="Report flow" width="260">
+  &nbsp;
+  <img src="docs/screen-vote.png" alt="Confirm or dispute a pin" width="260">
 </p>
 
-## 🧱 Stack
+## What it does
+
+**Street-level pins.** Drag a pin from the dock onto the map: *Smell*, *Noise 24/7* or *Noise bursts*. Each pin gets a soft aura on the map that hints at how far the problem reaches.
+
+**Building reports.** Flag a specific apartment (mould, pests, no hot water, illegal tourist flat…) or the common areas (broken lift, unsecured entrance, dirty stairwell…). Several reports on one building are grouped into a single card.
+
+**Confirm or dispute.** Neighbours vote on existing pins, so stale or false reports fade and real ones get backed up. Authors can add a short note or delete their own pins.
+
+**Honest by design.** Pins can only be dropped within 100 m of your real location. Sign-in is anonymous — no accounts, no personal data.
+
+**Lives in Telegram.** Runs as a Telegram Mini App out of the box, and as a normal web page everywhere else.
+
+## Stack
 
 | Layer | Technology |
 |---|---|
-| Map rendering | [MapLibre GL JS](https://maplibre.org/) |
-| Basemap tiles | [PMTiles](https://protomaps.com/docs/pmtiles) — single static file, generated from OpenStreetMap via [Protomaps](https://protomaps.com/) |
-| Data & auth | [Firebase](https://firebase.google.com/) (Firestore + Anonymous Auth) |
-| Mini App integration | [Telegram WebApp SDK](https://core.telegram.org/bots/webapps) |
-| Hosting | Static — configured for [Netlify](https://www.netlify.com/), works on Vercel/GitHub Pages too |
+| Map | [MapLibre GL JS](https://maplibre.org/) with a custom light style |
+| Basemap | [PMTiles](https://protomaps.com/docs/pmtiles) — one static file built from OpenStreetMap via [Protomaps](https://protomaps.com/) |
+| Data & auth | [Firebase](https://firebase.google.com/) — Firestore + Anonymous Auth |
+| Geocoding | [Nominatim](https://nominatim.org/) (rate-limited queue, 1 req/s) |
+| Mini App | [Telegram WebApp SDK](https://core.telegram.org/bots/webapps) |
+| Hosting | Any static host — configured for [Netlify](https://www.netlify.com/) |
 
-## 📁 Project structure
+## Project structure
 
 ```
 .
-├── index.html                # entry point
-├── app.js                    # map logic, Firebase wiring, UI behavior
-├── style.css                 # styles
-├── valencia.pmtiles          # basemap tiles (roads, buildings, water, labels)
-├── addresses_light.geojson   # house-number points overlay
-└── netlify.toml               # sets correct headers for serving .pmtiles
+├── index.html                 entry point
+├── app.js                     map style, Firebase wiring, UI logic
+├── style.css                  design tokens + all UI styles
+├── valencia.pmtiles           basemap tiles
+├── addresses_light.geojson    house-number overlay (zoom 17+)
+├── netlify.toml               headers for serving .pmtiles
+├── brand/                     logo, mark, Telegram avatar (SVG + PNG)
+└── docs/                      README screenshots
 ```
 
-## 🚀 Running locally
+## Run locally
 
-No build step required. Serve the folder with any static file server:
+No build step. Serve the folder with any static server:
 
 ```bash
 npx serve .
 ```
 
-Then open the printed local URL in your browser.
+## Deploy
 
-## ☁️ Deployment
+`netlify.toml` sets the `Content-Type`, byte-range and CORS headers that `.pmtiles` needs. Vercel, GitHub Pages or any host with custom headers works the same way once those headers are replicated.
 
-Configured for **Netlify** — `netlify.toml` sets the `Content-Type` and CORS headers `.pmtiles` needs to load correctly. Any static host that supports custom headers works the same way (e.g. Vercel, GitHub Pages), as long as you replicate the byte-range and CORS headers.
+## Firebase
 
-## 🔥 Firebase setup
+The app expects a Firebase project with:
 
-Vecina expects a Firebase project with:
-
-- **Firestore** enabled, with two collections:
-  - `markers` — point reports (smell / noise), each with a `votes` subcollection
-  - `reports` — per-building issue reports (apartment / community area)
+- **Firestore**
+  - `markers` — street-level pins (`smell`, `noise-permanent`, `noise-temporary`), each with a `votes` subcollection
+  - `reports` — building reports (`apartment`, `community`)
 - **Anonymous Authentication** enabled
 
-> The Firebase Web config in `app.js` is safe to keep public — this is standard for Firebase client SDKs. Access control is enforced through **Firestore Security Rules**, not by hiding the API key. Make sure your rules restrict writes so a user can only edit or delete their own markers and reports before deploying.
+> The Firebase web config in `app.js` is public by design. Access is controlled by **Firestore Security Rules** — make sure users can only edit or delete their own markers, reports and votes. The 100 m placement limit is enforced in the client only.
 
-## 🗺️ Data sources
+## Brand
 
-- `valencia.pmtiles` — generated from OpenStreetMap data via [Protomaps](https://protomaps.com/)
-- `addresses_light.geojson` — a trimmed address-point dataset; the full source file used to generate it isn't included in this repo (too large, and not needed to run the app)
+| Token | Value | Use |
+|---|---|---|
+| Ink | `#16130F` | text, primary buttons, mark background |
+| Naranja | `#FF5B2E` | accent, user location, roof in the mark |
+| Azul | `#2D5BFF` | common-area reports |
+| Paper | `#FBF9F6` | app background |
+| Smell / Noise 24/7 / Noise bursts | `#8B6CE8` / `#E8344E` / `#F5A524` | pin categories |
 
-## 🚫 Not included in this repo
+Type: **Bricolage Grotesque** for headings, **Instrument Sans** for UI. The logo is drawn as outlines (no font dependency); source files live in `brand/`.
 
-- `cloudflared`, `pmtiles` CLI tools used during development — install separately (e.g. `brew install cloudflared`, `brew install pmtiles`)
-- Raw/intermediate data files used to build `addresses_light.geojson`
+## Data sources
 
-## 🤝 Contributing
+- `valencia.pmtiles` — © [OpenStreetMap](https://www.openstreetmap.org/copyright) contributors, via Protomaps
+- `addresses_light.geojson` — trimmed address points; the full source file is not included (too large, not needed to run)
 
-Issues and pull requests are welcome. This is an early-stage project focused on Valencia — contributions extending coverage to other cities are of particular interest.
+Not in this repo: the `cloudflared` and `pmtiles` CLIs used during development (`brew install cloudflared pmtiles`) and raw intermediate data.
 
-## 📄 License
+## Contributing
 
-_TBD_
+Issues and PRs are welcome. Vecina is early-stage and Valencia-only for now — help bringing it to other cities is especially appreciated.
+
+## License
+
+TBD
